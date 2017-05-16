@@ -1,0 +1,74 @@
+<!--
+<div class="jumbotron">
+    <h1>{{test}}</h1>
+</div>
+-->
+
+<div class='col-sm-12 col-lg-12'>
+    <div class="form-group">
+        <label for="search">Search Athletes</label>
+        <input type="text" name="search" class="form-control" ng-model="search">
+    </div>
+    <button class='btn btn-primary' ng-click='seeAthletes(search)'>Search</button>
+</div>
+
+<div ng-repeat='athlete in athletes'>
+    <div class='col-sm-12 col-lg-12'>
+       <img id='profile-pic'ng-src="{{athlete.profilePic}}" alt="">
+        
+    </div>
+    <div class='col-sm-2 col-lg-2'>
+        <h4>{{athlete.name}}'s Gear </h4>
+        <div ng-repeat='gear in athlete.gear'>
+            <div class='athlete-products  col-sm-12 col-lg-12'>
+                <a href="{{gear.purchaseUrl}}" target="_blank"><img class='athlete-gear' src="{{gear.imgUrl}}" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+        <!--
+        <p>{{gear.brand}}</p>
+        <p>{{gear.model}}</p>
+-->
+<!--
+        <div class="col-sm-12 col-lg-12">
+            <button class='btn btn-default see-outing' ng-click='seeOutings(athlete._id)'>See Outings</button>
+        </div>
+-->
+        <div class='container col-sm-10 col-lg-10'>
+           <h2 id='athlete-name'>{{athlete.name}}'s Adventures</h2>
+            <div class="panel panel-default" ng-repeat="outing in outings">
+
+                <div class="panel-heading">
+                    <h4>{{ outing.title }}</h4>
+                </div>
+
+                <youtube-video video-url=outing.video player-width="'100%'"></youtube-video>
+
+                <div class="panel-body">
+                    <div class="pull-left">
+                        <p>{{ outing.description }}</p>
+
+                    </div><br>
+                    <div class='col-sm-12 col-lg-12'>
+                        <h4>Gear used on this outing</h4>
+                    </div>
+                    <div class='row col-sm-2 col-lg-2' ng-repeat="gear in outing.gear">
+                        <div>
+                            <img ng-click='openDetails = !openDetails' class='outing-gear-img' ng-src="{{gear.imgUrl}}" alt="">
+
+                            <div ng-show='openDetails' class='col-sm-12 col-lg-12'>
+                                <span><strong>{{gear.brand}}</strong></span><br>
+                                <span>{{gear.model}}</span>
+                                <a href="{{gear.purchaseUrl}}" target="_blank">Where to buy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+    </div>
+</div>

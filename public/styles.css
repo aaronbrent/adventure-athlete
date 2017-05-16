@@ -1,0 +1,82 @@
+#mountain {
+    width: 20%;
+    height: auto;
+}
+
+.gear-img {
+    width: 90%;
+}
+
+.panel {
+    height: 100%;
+}
+
+.main-gear-img {
+    width: 90%;
+    text-align: center;
+    
+}
+
+.outing-gear-img {
+    width: 100%;
+    
+}
+
+.outing-gear-img:hover {
+    cursor: pointer;
+}
+
+.outing-form {
+    height: 100%;
+}
+
+.save {
+    margin-top: 10px;
+}
+
+.drop {
+    min-height: 150px;
+    max-height: 250px;
+    overflow-y: scroll;
+    overflow-x:hidden;
+}
+
+.panel-heading {
+    height: 70px;
+}
+
+.gear-model{
+    height: 70px;
+}
+
+.btn-primary {
+    margin-bottom: 10px;
+}
+h3 {
+    display: inline;
+}
+
+.athlete-gear {
+    width: 100%;
+}
+
+.athlete-products {
+    min-height: 50px;
+    max-height: 100px;
+    overflow-y: scroll;
+    overflow-x:hidden;
+}
+
+#profile-pic {
+    display: inline;
+    width:100px;
+}
+
+#athlete-name {
+    display: inline;
+}
+
+
+
+
+

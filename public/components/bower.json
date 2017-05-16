@@ -1,0 +1,18 @@
+{
+  "name": "components",
+  "homepage": "https://github.com/aaronbrent/aaron-ellis-portfolio",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-dragdrop": "^1.0.13",
+    "angular-youtube-mb": "^1.3.1"
+  }
+}

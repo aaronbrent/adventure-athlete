@@ -1,0 +1,55 @@
+<div class="row">
+     <div class='col-sm-12 col-lg-12'>
+        <button ng-hide='openForm' ng-click='openForm = !openForm' class='btn btn-primary'>See Add Gear</button>
+    </div>
+    <div class='col-sm-12 col-lg-12'>
+        <button ng-show='openForm' ng-click='openForm = !openForm' class='btn btn-primary'>Hide Add Gear</button>
+    </div>
+    <form ng-show='openForm' class="col-md-4 well" name="gearForm" novalidate>
+        <div ng-show='success' class="alert alert-success col-xs-12 col-lg-12">You have successfully added {{addGear}} </div>
+        <h1>Add gear</h1>
+        <div class="form-group">
+            <label for="brand">Brand</label>
+            <input type="text" name="title" class="form-control" ng-model="gear.brand">
+        </div>
+        <div class="form-group">
+            <label for="model">Model</label>
+            <input type="text" name="model" class="form-control" ng-model="gear.model">
+        </div>
+        <div class="form-group">
+            <label for="imgUrl">Image Url</label>
+            <input type="text" name="imgUrl" class="form-control" ng-model="gear.imgUrl">
+        </div>
+        <div class="form-group">
+            <label for="purchaseurl">Purchase Url</label>
+            <input type="text" name="purchaseurl" class="form-control" ng-model="gear.purchaseUrl">
+        </div>
+
+        <button ng-click="saveProduct(gear)" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Save</button>
+    </form>
+
+</div>
+
+
+
+<div class='container'>
+    
+        <div class="widget" ng-repeat="product in products">
+           <div class='row col-xs-6 col-sm-3 col-md-3 col-lg-2'>
+            <div class="panel panel-default gear-panel">
+
+                <div class="panel-heading">
+                    <h4>{{ product.brand }}</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="pull-left">
+                        <p class='gear-model'>{{ product.model }}</p>
+                    </div>
+                    <div>
+                        <img class='main-gear-img' ng-src="{{product.imgUrl}}" alt="{{product.model}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

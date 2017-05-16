@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="AdventureApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Adventure App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <navbar></navbar>
+
+    <div class="container">
+        <div ng-view></div>
+    </div>
+
+    <!-- Third-party -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="http://code.angularjs.org/1.5.6/angular-route.js"></script>
+    
+    <script src="components/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="components/bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script src="components/bower_components/angular-dragdrop/src/angular-dragdrop.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src='components/bower_components/angular-youtube-mb/dist/angular-youtube-embed.min.js'></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    
+
+    <!-- Main App -->
+    <script src="app.js"></script>
+    <script src="components/outings/outing.js"></script>
+    <script src="components/gear/addGear.js"></script>
+    <script src="components/home/home.js"></script>
+    
+
+    <!-- Authentication -->
+    <script src="components/auth/auth.js"></script>
+    <script src="components/auth/login/login.js"></script>
+    <script src="components/auth/signup/signup.js"></script>
+    <script src="components/auth/logout/logout.js"></script> 
+    <script src="components/navbar/navbar.js"></script>  
+    <script src="components/profile/profile.js"></script>
+    <script src="components/auth/forgot/forgot.js"></script>
+     
+</body>
+
+</html>
